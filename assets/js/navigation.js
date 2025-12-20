@@ -203,5 +203,3 @@ document.addEventListener('wheel', (e) => {
     }
   }
 }, { passive: true });
-
->>>>>>> 0111fd69c5fd1d39b33efe93fce6213844032f08
