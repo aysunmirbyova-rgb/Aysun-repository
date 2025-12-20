@@ -36,11 +36,7 @@ document.addEventListener('keydown', (e) => {
 });
 
 // --- SWIPE NAVIGATION & PULL-TO-REFRESH PREVENTION ---
-let touchstartX = 0;
-let touchendX = 0;
-let touchstartY = 0;
-let touchendY = 0;
-const swipeThreshold = 50;
+
 
 function handleSwipe() {
   if (window.innerWidth <= 600) {
@@ -103,7 +99,7 @@ document.addEventListener('wheel', (e) => {
   }
 }, { passive: true });
 
-=======
+
 // --- PAGE INDICATOR AUTO-HIDE ON MOBILE ---
 function hideIndicatorMobile() {
   setTimeout(() => {
