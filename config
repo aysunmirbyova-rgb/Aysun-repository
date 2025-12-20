@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [core]
 	repositoryformatversion = 0
 	filemode = false
@@ -8,3 +9,15 @@
 [remote "origin"]
 	url = https://github.com/aysunmirbyova-rgb/Aysun-s-reposity.git
 	fetch = +refs/heads/*:refs/remotes/origin/*
+=======
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = false
+	logallrefupdates = true
+	symlinks = false
+	ignorecase = true
+[remote "origin"]
+	url = https://github.com/aysunmirbyova-rgb/Aysun-s-reposity.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+>>>>>>> abda2f284bb0f1592326fa09858500a0247d75bc
