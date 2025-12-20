@@ -1,0 +1,128 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    {% seo %}
+</head>
+<body>
+    <nav class="top-navbar">
+        <div class="navbar-content">
+            <a href="/" class="navbar-logo">Aysun</a>
+            <ul class="navbar-links">
+                <li><a href="/" {% if page.url == "/" or page.url == "/index.html" %}class="active"{% endif %}>Home</a></li>
+                <li><a href="/about" {% if page.url == "/about" or page.url == "/about.html" or page.url == "/about/" %}class="active"{% endif %}>About</a></li>
+                <li><a href="/projects" {% if page.url == "/projects" or page.url == "/projects.html" or page.url == "/projects/" %}class="active"{% endif %}>Projects</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="page-wrapper">
+        <div class="nav-arrows">
+        {% if page.prev_page %}
+        <a href="{{ page.prev_page }}" class="arrow prev" aria-label="Previous Page">
+            <i class="fas fa-chevron-left"></i>
+        </a>
+        {% else %}
+        <div></div>
+        {% endif %}
+        {% if page.next_page %}
+        <a href="{{ page.next_page }}" class="arrow next" aria-label="Next Page">
+            <i class="fas fa-chevron-right"></i>
+        </a>
+        {% endif %}
+    </div>
+
+    <main class="container">
+        {{ content }}
+    </main>
+
+    <div class="page-indicator" id="page-indicator">
+        {% if page.url == "/" or page.url == "/index.html" %}
+        <span class="dot active"></span>
+        <a href="/about" class="dot"></a>
+        <a href="/projects" class="dot"></a>
+        {% elsif page.url == "/about" or page.url == "/about.html" or page.url == "/about/" %}
+        <a href="/" class="dot"></a>
+        <span class="dot active"></span>
+        <a href="/projects" class="dot"></a>
+        {% else %}
+        <a href="/" class="dot"></a>
+        <a href="/about" class="dot"></a>
+        <span class="dot active"></span>
+        {% endif %}
+    </div>
+
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; {{ 'now' | date: "%Y" }} {{ site.title | default: "Personal Website" }}. All rights reserved.</p>
+            <p class="footer-links">
+                <a href="/">Home</a> | 
+                <a href="/about">About</a> | 
+                <a href="/projects">Projects</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="{{ '/assets/js/navigation.js' | relative_url }}"></script>
+</body>
+</html>
+
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    {% seo %}
+</head>
+<body>
+    <div class="nav-arrows">
+        {% if page.prev_page %}
+        <a href="{{ page.prev_page }}" class="arrow prev" aria-label="Previous Page">
+            <i class="fas fa-chevron-left"></i>
+        </a>
+        {% else %}
+        <div></div>
+        {% endif %}
+        {% if page.next_page %}
+        <a href="{{ page.next_page }}" class="arrow next" aria-label="Next Page">
+            <i class="fas fa-chevron-right"></i>
+        </a>
+        {% endif %}
+    </div>
+
+    <main class="container">
+        {{ content }}
+    </main>
+
+    <div class="page-indicator" id="page-indicator">
+        {% if page.url == "/" or page.url == "/index.html" %}
+        <span class="dot active"></span>
+        <a href="/about" class="dot"></a>
+        <a href="/projects" class="dot"></a>
+        {% elsif page.url == "/about" or page.url == "/about.html" or page.url == "/about/" %}
+        <a href="/" class="dot"></a>
+        <span class="dot active"></span>
+        <a href="/projects" class="dot"></a>
+        {% else %}
+        <a href="/" class="dot"></a>
+        <a href="/about" class="dot"></a>
+        <span class="dot active"></span>
+        {% endif %}
+    </div>
+
+    <script src="{{ '/assets/js/navigation.js' | relative_url }}"></script>
+</body>
+</html>
+
+>>>>>>> 0111fd69c5fd1d39b33efe93fce6213844032f08
